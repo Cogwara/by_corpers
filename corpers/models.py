@@ -9,11 +9,6 @@ def get_upload_file_name(filename):
 
 
 class Corper(models.Model):
-    corper = models.ForeignKey(User)
-    state_code = models.CharField(max_length=12)
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    email = models.EmailField(null=True)
     slug = models.SlugField(unique=True)
     sex = models.CharField(max_length=6)
     state_of_origin = models.CharField(max_length=20)
